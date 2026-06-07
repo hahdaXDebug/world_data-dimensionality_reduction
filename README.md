@@ -1,13 +1,11 @@
-# Dimensionality Reduction using Principal Component Analysis, t-SNE, and UMAP for Global Country and Information Data
+# Dimensionality Reduction using Principal Component Analysis for Global Country and Information Data
 
 **Author:** John Adrian T. Ada  
 **Dataset:** Global Country Information Dataset 2023  
 **Dataset DOI:** `10.34740`
 
-## Overview
-This project explores the **Global Country Information Dataset 2023** by applying various dimensionality reduction techniques. Specifically, it utilizes Principal Component Analysis (PCA), t-Distributed Stochastic Neighbor Embedding (t-SNE), and Uniform Manifold Approximation and Projection (UMAP) to visualize and analyze complex global development indicators.
-
-The goal is to reduce the high-dimensional data into meaningful components to uncover patterns, such as identifying which countries are in need of specific types of aid (e.g., financial assistance for medical care, nutrition, health, or urban planning and infrastructure).
+## Executive Summary
+This notebook demonstrates the use of Principal Component Analysis for dimensionality reduction for the Global Country Information datset (2023) for determining foreign aid distribution. Other methods such as t-Distributed Stochastic Neighbor Embedding (t-SNE) and Uniform Manifold Approximation and Projection (UMAP) were used as exploratory tools where the ten features (Birth Rate, Fertility Rate, Infant Mortality, Life Expectancy, GDP, Unemployment Rate, Urban Population, $C0_{2}$ emmisions, Physicians per thousand and Density) were visualized by projecting them into two dimensions. Results show that two principal components were enough to explain around 70% of the data, while three components were needed to cross the 80% threshold. PC1 was defined along the x-axis of the PCA biplot and it can be generalized as the axis that refers to Health and Healthcare given the features that lie along it and the relationships present (Infant Mortality vs Life Expectancy, etc). On the other hand, PC2 can be treated as the principal component that is about Urban Development, where features such as $CO_{2}$ emissions, GDP and Urban Population are present, all being correlated with one another. UMAP, meanwhile, was preffered as a better exploratory tool for uncovering local and global structure while visualizing better intracluster compactness and cluster separation as better separates the two extremes of the development level, that being Low and High development level countries visually. 
 
 ## Project Structure
 * **Part 1 - Data Preparation**
